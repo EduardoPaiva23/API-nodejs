@@ -1,0 +1,119 @@
+{
+	"name": "vscode-express",
+	"displayName": "Express",
+	"description": "Hosts current workspace with Express web server",
+	"version": "0.0.5",
+	"publisher": "Compulim",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"icon": "icon.png",
+	"galleryBanner.color": "#0D5CAB",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/compulim/vscode-express.git"
+	},
+	"bugs": "https://github.com/compulim/vscode-express/issues/",
+	"homepage": "https://github.com/compulim/vscode-express/blob/master/README.md",
+	"keywords": [
+		"express",
+		"expressjs",
+		"hosting",
+		"web",
+		"web server"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:express.hostWorkspace",
+		"onCommand:express.hostWorkspaceAndOpenInBrowser",
+		"onCommand:express.hostWorkspaceWithRandomPort",
+		"onCommand:express.hostWorkspaceWithRandomPortAndOpenInBrowser",
+		"onCommand:express.openInBrowser",
+		"onCommand:express.stopServer",
+		"onCommand:express.showOutput"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "express.hostWorkspace",
+				"title": "Express: Host Current Workspace"
+			},
+			{
+				"command": "express.hostWorkspaceAndOpenInBrowser",
+				"title": "Express: Host Current Workspace and Open in Browser"
+			},
+			{
+				"command": "express.hostWorkspaceWithRandomPort",
+				"title": "Express: Host Current Workspace with Random Port Number"
+			},
+			{
+				"command": "express.hostWorkspaceWithRandomPortAndOpenInBrowser",
+				"title": "Express: Host Current Workspace with Random Port Number and Open in Browser"
+			},
+			{
+				"command": "express.openInBrowser",
+				"title": "Express: Open Currently Hosted Website in Browser"
+			},
+			{
+				"command": "express.stopServer",
+				"title": "Express: Stop Server"
+			},
+			{
+				"command": "express.showOutput",
+				"title": "Express: Show Output"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Express configuration",
+			"properties": {
+				"express.portNumber": {
+					"type": "number",
+					"default": 80,
+					"description": "Specifies the port number the Express server should listen to"
+				},
+				"express.omitInformationMessage": {
+					"type": "boolean",
+					"default": false,
+					"description": "Determines whether to omit informational messages"
+				},
+				"express.relativeRoot": {
+					"type": "string",
+					"default": null,
+					"description": "Specifies the path to be hosted on Express, relative to the workspace root"
+				},
+				"express.randomPortNumber.min": {
+					"type": "number",
+					"default": 8000,
+					"description": "Specifies the minimum port number to use for random port number"
+				},
+				"express.randomPortNumber.max": {
+					"type": "number",
+					"default": 8999,
+					"description": "Specifies the maximum port number to use for random port number"
+				},
+				"express.showOutput": {
+					"type": "boolean",
+					"default": true,
+					"description": "Determines whether to show output on server start"
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"vscode": "0.11.x"
+	},
+	"dependencies": {
+		"express": "^4.13.4",
+		"open": "0.0.5",
+		"server-destroy": "^1.0.1"
+	},
+	"__metadata": {
+		"id": "6d6e969b-0641-4382-9e60-aab9854c66bb",
+		"publisherId": "f9dbfd7c-f9a1-434c-9971-648ad2e23f96",
+		"publisherDisplayName": "Compulim"
+	}
+}

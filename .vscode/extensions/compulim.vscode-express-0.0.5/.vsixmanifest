@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="vscode-express" Version="0.0.5" Publisher="Compulim"/>
+    <DisplayName>Express</DisplayName>
+    <Description xml:space="preserve">Hosts current workspace with Express web server</Description>
+    <Tags>express,expressjs,hosting,web,web server,vscode</Tags>
+    <Categories>Other</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Properties>
+      
+        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/compulim/vscode-express.git" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/compulim/vscode-express.git" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Repository" Value="https://github.com/compulim/vscode-express.git" />
+      
+      <Property Id="Microsoft.VisualStudio.Services.Links.Support" Value="https://github.com/compulim/vscode-express/issues/" />
+      <Property Id="Microsoft.VisualStudio.Services.Links.Learn" Value="https://github.com/compulim/vscode-express/blob/master/README.md" />
+      
+      
+    </Properties>
+    
+    <Icon>extension/icon.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/icon.png" Addressable="true" />
+  </Assets>
+</PackageManifest>
